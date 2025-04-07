@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+let email;
 function Auth() {
     const [value, setValue] = useState("")
     const set = (e) => {
@@ -13,10 +14,11 @@ function Auth() {
         setDob(e.target.value);
     }
     const name = document.getElementById("name");
-    const email = document.getElementById("email");
+    email = document.getElementById("email");
     const dob = document.getElementById("dob");
     const poster = () => {
-        fetch("http://localhost:5000/", {
+        localStorage.setItem("email", email.value);
+        fetch("http://localhost:5000/auth", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -52,4 +54,4 @@ function Auth() {
         </>
     )
 }
-export default Auth;
+export { Auth }
