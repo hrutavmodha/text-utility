@@ -5,6 +5,9 @@
 	font-family: "Roboto";
 }
 
+body {
+	overflow-x: hidden;
+}
 #main {
 	display: flex;
 	flex-direction: column;
