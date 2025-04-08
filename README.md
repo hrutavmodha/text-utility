@@ -6,8 +6,7 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 
 - **Frontend**: React.js  
 - **Backend**: Node.js, Express.js  
-- **Database**: MongoDB  
-- **Full Stack**: MERN
+- **Database**: MongoDB
 
 ## Features
 
