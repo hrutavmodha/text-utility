@@ -14,7 +14,6 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 - Do play with a text-based game and also review it  
 - Displays comments in real-time
 - Enable Dark Mode and switch easily between Light and Dark Mode
-- JSON-based backend communication
 
 ## Getting Started
 
