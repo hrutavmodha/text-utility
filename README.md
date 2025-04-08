@@ -1,6 +1,6 @@
 # Web Text App
 
-A sleek and powerful text sharing platform built using the MERN Stack. Easily submit, view, and manage user-generated content with smooth interaction and real-time updates all within a modern, minimal UI.
+A sleek and powerful text editing platform built using the MERN Stack. Easily submit, view, and manage user-generated content with smooth interaction and real-time updates all within a modern, minimal UI.
 
 ## Tech Stack
 
