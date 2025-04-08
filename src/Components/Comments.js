@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect} from 'react';
 function Comments() {
     const [value, setValue] = useState("");
     const getValue = (e) => {
@@ -27,7 +27,33 @@ function Comments() {
     const handleComment = (e) => {
         e.preventDefault();
         poster();
-    };
+    }
+    useEffect(() => {
+        fetch("http://localhost:5000/about",{
+            method: "GET",
+            headers: {
+                "Content-type": "application/json"
+            }
+        }).then((res) => {
+            return res.json();
+        }).then((data) => {
+            data.forEach((item) => {
+                const div = document.createElement("div");
+                const cmts = document.getElementById("cmts");
+                div.innerHTML = `
+                    <div class="dcmt">
+                        <i class="fa-solid fa-user"></i>
+                        <b>${item.email}:</b>
+                        <br/>
+                        ${item.comment}
+                        <br/><br/>
+                    </div>`;
+                cmts.appendChild(div);
+            })
+        }).catch((error) => {   
+            console.log(error);
+        });
+    }, []);
     return (
         <>
             <h1>Reviews</h1>
@@ -38,10 +64,8 @@ function Comments() {
                 <br />
                 <button onClick={handleComment}>Comment</button>
             </div>
-            <div className="comments">
-                <h2>Comments</h2>
-                <p>{/*Comments will be shown here*/}</p>
-            </div>
+            <h1>Comments</h1>
+            <div className="comments" id="cmts"></div>
         </>
     )
 }
