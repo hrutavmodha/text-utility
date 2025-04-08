@@ -10,13 +10,13 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 
 ## Features
 
-- Do play with a text-based game and also review it  
+- Play with your own text and also review your experience 
 - Displays comments in real-time
-- Enable Dark Mode and switch easily between Light and Dark Mode
+- Enabled Dark Mode and switch easily between Light and Dark Mode
 
 ## Getting Started
 
-> **Prerequisite:** Make sure MERN Stack is set up on your local PC.
+> **Prerequisite:** Make sure MERN Stack is set up on your local PC properly.
 
 ### 1. Clone the repository
 
