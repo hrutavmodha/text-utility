@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 function Comments() {
     const [value, setValue] = useState("");
     const getValue = (e) => {
@@ -13,7 +13,7 @@ function Comments() {
             },
             body: JSON.stringify({
                 email: localStorage.getItem("email"),
-                comment: comment.value
+                comment: comment.value,
             })
         }).then((response) => {
             return response.text()
@@ -29,7 +29,7 @@ function Comments() {
         poster();
     }
     useEffect(() => {
-        fetch("http://localhost:5000/about",{
+        fetch("http://localhost:5000/about", {
             method: "GET",
             headers: {
                 "Content-type": "application/json"
@@ -41,16 +41,18 @@ function Comments() {
                 const div = document.createElement("div");
                 const cmts = document.getElementById("cmts");
                 div.innerHTML = `
-                    <div class="dcmt">
-                        <i class="fa-solid fa-user"></i>
-                        <b>${item.email}:</b>
-                        <br/>
-                        ${item.comment}
-                        <br/><br/>
-                    </div>`;
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="review-email">${item.email}</span>
+                    </div>
+                    <div class="review-body">
+                        <p class="review-text">${item.comment}</p>
+                    </div>
+                </div>
+            `;
                 cmts.appendChild(div);
             })
-        }).catch((error) => {   
+        }).catch((error) => {
             console.log(error);
         });
     }, []);
@@ -65,7 +67,7 @@ function Comments() {
                 <button onClick={handleComment}>Comment</button>
             </div>
             <h1>Comments</h1>
-            <div className="comments" id="cmts"></div>
+            <div id="cmts" align="left"></div>
         </>
     )
 }
