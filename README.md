@@ -29,14 +29,14 @@ cd .\rutuscodes
 ### 2. Install dependencies for both client and server
 
 ```bash
-#Command to install the project dependencies in `rutuscodes` folder
+#Command to install the project dependencies in rutuscodes folder
 npm install
 ```
 
 ### 3. Start the development server
 
 ```bash
-# Ensure concurrently is properly installed and is added in `package.json` to handle frontend and backend concurrently before running the following command
+# Ensure concurrently is properly installed and is added in package.json to handle frontend and backend concurrently before running the following command
 npm run dev
 ```
 
