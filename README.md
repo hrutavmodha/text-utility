@@ -51,5 +51,5 @@ Created with passion by **Hrutav Modha**
 GitHub: [github.com/rutu-modha](https://github.com/rutu-modha)
 
 ---
-
+#### Suggestions and pull requests are welcome!
 **Note:** App is currently not yet deployed.
