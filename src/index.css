@@ -140,3 +140,32 @@ input {
 	padding: 3px;
 	border-radius: 10px
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	* {
+		box-sizing: border-box;
+	}
+	.navbar {
+		height: 60px;
+		overflow-x: scroll;
+		display: flex;
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+	.navbar ul {
+		list-style: none;
+		display: flex;
+	}
+	textarea {
+		width: 50vw;
+		height: 50vw;
+	}
+	.navbtn {
+		background: none;
+	}
+	input {
+		width: 50vw;
+	}
+	
+}
