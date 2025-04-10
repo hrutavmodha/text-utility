@@ -21,6 +21,7 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 ### 1. Clone the repository
 
 ```bash
+#Command to clone
 git clone https://github.com/rutu-modha/rutuscodes.git
 cd .\rutuscodes
 ```
@@ -28,18 +29,14 @@ cd .\rutuscodes
 ### 2. Install dependencies for both client and server
 
 ```bash
-# In root
-npm install nodemon express mongoose react cors path
-
-# Go into client folder
-cd .\rutuscodes\src
+#Command to install the project dependencies in `rutuscodes` folder
 npm install
 ```
 
 ### 3. Start the development server
 
 ```bash
-# Ensure concurrently is properly installed and is added in `package.json` to handle frontend and backend concurrently
+# Ensure concurrently is properly installed and is added in `package.json` to handle frontend and backend concurrently before running the following command
 npm run dev
 ```
 
