@@ -14,14 +14,19 @@ function Home() {
         setIvalue("")
     }
     const copier = () => {
-        navigator.clipboard.writeText(output.current.innerText)
+        try {
+             navigator.clipboard.writeText(output.current.innerText)
             .then(() => {
                 alert("Copied to clipboard")
             }).catch((error) => {
                 alert("Error occured while attempting to copying to clipboard")
                 console.log(error)
             });
-    }
+        }
+        catch(error){
+            alert("Hold the output and then select the option of 'Copy' to copy the output to the clipboard")
+        }
+            
     const titlecaser = () => {
         let ans = ivalue[0].toUpperCase()
         for (let i = 1; i < ivalue.length; i++) {
