@@ -8,6 +8,13 @@ body {
 	overflow-x: hidden;
 }
 
+.body {  
+	height: fit-content;
+	width: fit-content;
+	min-height: 91.5vh;
+	min-width: 90vw;
+
+}
 #main {
 	display: flex;
 	flex-direction: column;
@@ -16,7 +23,6 @@ body {
 	width: 100%;
 	padding: 1rem;
 }
-
 .review-card {
 	background: #555;
 	margin: 10px;
@@ -61,16 +67,17 @@ textarea {
 	font-size: 1rem;
 	resize: vertical;
 	overflow-y: auto;
+	border-radius: 15px;
 }
 
 button {
+	background:blue;
 	color: #fff;
-	background: blue;
 	margin: 5px;
 	border: none;
 	cursor: pointer;
 	border-radius: 5px;
-	transition: all 0.7s ease;
+	transition: all 1s ease;
 	font-size: 1rem;
 	width: 100px;
 	height: fit-content;
@@ -83,7 +90,7 @@ button:hover {
 
 p {
 	width: 95%;
-	word-wrap: break-word;
+	word-wrap: normal;
 	overflow-y: auto;
 }
 
@@ -107,7 +114,7 @@ h2 {
 	top: 0;
 	z-index: 100;
 	background: darkblue;
-	animation: slide-in 2s ease;
+	animation: slide-in 1.5s ease-in;
 }
 
 @keyframes slide-in {
@@ -124,10 +131,8 @@ h2 {
 }
 
 .navbar ul .navbtn {
-	padding: 10px;
 	color: #fff;
 	text-decoration: none;
-	text-decoration: solid;
 }
 
 .navbtn {
@@ -140,7 +145,6 @@ input {
 	padding: 3px;
 	border-radius: 10px
 }
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
 	* {
 		box-sizing: border-box;
