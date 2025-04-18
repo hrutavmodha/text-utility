@@ -23,7 +23,7 @@ function Comments() {
         };
     }
     const poster = () => {
-        fetch(`http://localhost:5000/reviews`, {
+        fetch(`${process.env.REACT_APP_API_URL}/reviews`, {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -42,7 +42,7 @@ function Comments() {
         });
     };
     useEffect(() => {
-        fetch("http://localhost:5000/reviews", {
+        fetch(`${process.env.REACT_APP_API_URL}/reviews`, {
             method: "GET",
             headers: {
                 "Content-type": "application/json"
