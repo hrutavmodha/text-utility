@@ -24,7 +24,7 @@ function Auth() {
         }
         else if (email.value && name.value) {
             localStorage.setItem("email", email.value);
-            fetch(`${process.env.REACT_APP_API_URL}/auth`, {
+            fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"

@@ -4,8 +4,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
-const port = process.env.PORT || 5000
-const url = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
 app.use(express.json(), cors());
 app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 mongoose.connect(process.env.MONGO_URI, {
@@ -59,6 +57,6 @@ app.get(`${url}/reviews`, async (req, res) => {
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.listen(port, () => {
-    console.log("Server is running on render");
+app.listen(process.env.PORT,() => {
+    console.log(`Server is running on ${process.env.REACT_APP_BACKEND_URL}`);
 });
