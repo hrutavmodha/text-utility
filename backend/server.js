@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000
+const url = process.env.REACT_APP_FRONTEND_URL || "http://localhost:3000";
 app.use(express.json(), cors());
 app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 mongoose.connect(process.env.MONGO_URI, {
@@ -24,7 +25,7 @@ const cmtschema = new mongoose.Schema({
     comment: String
 });
 const user = mongoose.model("users", userschema);
-app.post("/auth", (req, res) => {
+app.post(`${url}/auth`, (req, res) => {
     const User = new user({
         name: req.body.name,
         email: req.body.email,
@@ -38,7 +39,7 @@ app.post("/auth", (req, res) => {
     });
 });
 const review = mongoose.model("feedback", cmtschema);
-app.post("/reviews", async (req, res) => {
+app.post(`${url}/reviews`, async (req, res) => {
     const comment = new review({
         email: req.body.email,
         comment: req.body.comment,
@@ -51,7 +52,7 @@ app.post("/reviews", async (req, res) => {
         console.log(err);
     });
 });
-app.get("/reviews", async (req, res) => {
+app.get(`${url}/reviews`, async (req, res) => {
     const list = await review.find({});
     res.json(list)
 });
