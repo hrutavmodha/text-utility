@@ -23,7 +23,7 @@ const cmtschema = new mongoose.Schema({
     comment: String
 });
 const user = mongoose.model("users", userschema);
-app.post(`${url}/auth`, (req, res) => {
+app.post(`${process.env.REACT_APP_FRONTEND_URL}/auth`, (req, res) => {
     const User = new user({
         name: req.body.name,
         email: req.body.email,
@@ -37,7 +37,7 @@ app.post(`${url}/auth`, (req, res) => {
     });
 });
 const review = mongoose.model("feedback", cmtschema);
-app.post(`${url}/reviews`, async (req, res) => {
+app.post(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
     const comment = new review({
         email: req.body.email,
         comment: req.body.comment,
@@ -50,7 +50,7 @@ app.post(`${url}/reviews`, async (req, res) => {
         console.log(err);
     });
 });
-app.get(`${url}/reviews`, async (req, res) => {
+app.get(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
     const list = await review.find({});
     res.json(list)
 });
