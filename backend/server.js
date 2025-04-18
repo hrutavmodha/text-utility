@@ -55,7 +55,7 @@ app.get(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
     res.json(list)
 });
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
+    res.sendFile(path.join(__dirname, "..","frontend","build", "index.html"));
 });
 app.listen(process.env.PORT,() => {
     console.log(`Server is running on ${process.env.REACT_APP_BACKEND_URL}`);
