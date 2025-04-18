@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
+const port = process.env.PORT || 5000
 app.use(express.json(), cors());
 app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 mongoose.connect(process.env.MONGO_URI, {
@@ -57,6 +58,6 @@ app.get("/reviews", async (req, res) => {
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "build", "index.html"));
 });
-app.listen(5000, "localhost", () => {
-    console.log("Server is running on http://localhost:5000/");
+app.listen(`${port}`, () => {
+    console.log("Server is running on render");
 });
