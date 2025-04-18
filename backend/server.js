@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 app.use(express.json(), cors());
-app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -53,9 +52,6 @@ app.post(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
 app.get(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
     const list = await review.find({});
     res.json(list)
-});
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..","frontend","build", "index.html"));
 });
 app.listen(process.env.PORT,() => {
     console.log(`Server is running on ${process.env.REACT_APP_BACKEND_URL}`);
