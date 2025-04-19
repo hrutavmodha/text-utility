@@ -7,8 +7,8 @@ function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext); 
     return (
         <div style={mode ? dark : light}>
-            <h1 style={{font: "Comic Sans MS", color: "grey"}}>Text Utility App</h1>
             <div className="navbar">
+            <h1 style={{font: "Comic Sans MS", color: "grey"}}>Text Utility App</h1>
                 <Link to="/">
                     <button className="navbtn">Home</button>
                 </Link>
