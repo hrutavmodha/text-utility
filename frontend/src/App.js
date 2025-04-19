@@ -3,13 +3,10 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Home, About, Contact, Comments, Auth } from "./Components/Site";
 import { ModeContext } from "./ModeContext";
 import "./index.css";
-
 function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
-
     const toggleMenu = () => setMenuOpen(!menuOpen);
-
     const navbarStyles = {
         container: {
             display: "flex",
@@ -66,9 +63,8 @@ function App() {
                     <h3 style={navbarStyles.title}>Text Utilities</h3>
                     <div>
                         <button onClick={toggler} style={navbarStyles.darkBtn}>{btn} Mode</button>
-                        <button onClick={toggleMenu} style={navbarStyles.hamburger}>
-                            &#9776;
-                        </button>
+                        <button onClick={toggleMenu} className="hamburger">&#9776;</button>
+                        <div className={`nav-links ${menuOpen ? "show" : ""}`}></div>
                     </div>
                 </div>
                 <div style={navbarStyles.navLinks}>
