@@ -9,7 +9,6 @@ app.use(cors({
     origin: process.env.REACT_APP_FRONTEND_URL,
     method: ["GET", "POST"]
 }));
-app.use(express.static(path.join(__dirname, "..", "frontend","build")));
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -32,13 +31,20 @@ app.post("/auth", async (req, res) => {
         name: req.body.name,
         email: req.body.email,
     });
-    await User.save().then(() => {
-        console.log("Data saved successfully");
-        res.send("You have logged in successfully");
+    const que = await user.findOne({ email: req.body.email })
+    if (que) {
+        res.send(`User already exists with email ${que.email}`);
         res.end();
-    }).catch((err) => {
-        console.log(err);
-    });
+    }
+    else{
+        await User.save().then(() => {
+            res.send("You have logged in successfully");
+            res.end();
+        }).catch((err) => {
+            res.send("An error occurred while logging in. Please try again later.");
+            res.end();
+        });
+    }
 });
 const review = mongoose.model("feedback", cmtschema);
 app.post("/reviews", async (req, res) => {
@@ -56,7 +62,7 @@ app.post("/reviews", async (req, res) => {
         res.end();
     });
 });
-app.get("/#/reviews", async (req, res) => {
+app.get("/reviews", async (req, res) => {
     const list = await review.find({});
     res.json(list)
 });

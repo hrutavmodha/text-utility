@@ -8,6 +8,8 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 - **Backend**: Node.js, Express.js  
 - **Database**: MongoDB
 
+## Live Demo
+[https://webtextapp.onrender.com](https://webtextapp.onrender.com)
 ## Features
 
 - Play with your own text and also review your experience 
