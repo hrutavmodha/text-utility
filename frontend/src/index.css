@@ -148,7 +148,7 @@ input {
 	border-radius: 10px
 }
 .nav-links {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	margin-top: 10px;
 }
