@@ -1,10 +1,13 @@
 const express = require("express");
-const path = require("path");
 const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
-app.use(express.json(), cors());
+app.use(express.json());
+app.use(cors({
+    origin: process.env.REACT_APP_FRONTEND_URL,
+    credentials: true
+}))
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -22,12 +25,12 @@ const cmtschema = new mongoose.Schema({
     comment: String
 });
 const user = mongoose.model("users", userschema);
-app.post(`${process.env.REACT_APP_FRONTEND_URL}/auth`, (req, res) => {
+app.post("/auth", async (req, res) => {
     const User = new user({
         name: req.body.name,
         email: req.body.email,
     });
-    User.save().then(() => {
+    await User.save().then(() => {
         console.log("Data saved successfully");
         res.send("You have logged in successfully");
         res.end();
@@ -36,7 +39,7 @@ app.post(`${process.env.REACT_APP_FRONTEND_URL}/auth`, (req, res) => {
     });
 });
 const review = mongoose.model("feedback", cmtschema);
-app.post(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
+app.post("/reviews", async (req, res) => {
     const comment = new review({
         email: req.body.email,
         comment: req.body.comment,
@@ -47,9 +50,11 @@ app.post(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
         res.end();
     }).catch((err) => {
         console.log(err);
+        res.send("An error occurred while uploading your comment. Please try again later.");
+        res.end();
     });
 });
-app.get(`${process.env.REACT_APP_FRONTEND_URL}/reviews`, async (req, res) => {
+app.get("/reviews", async (req, res) => {
     const list = await review.find({});
     res.json(list)
 });
