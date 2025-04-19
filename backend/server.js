@@ -26,7 +26,7 @@ const cmtschema = new mongoose.Schema({
     comment: String
 });
 const user = mongoose.model("users", userschema);
-app.post("/auth", async (req, res) => {
+app.post("/#/auth", async (req, res) => {
     const User = new user({
         name: req.body.name,
         email: req.body.email,
@@ -40,7 +40,7 @@ app.post("/auth", async (req, res) => {
     });
 });
 const review = mongoose.model("feedback", cmtschema);
-app.post("/reviews", async (req, res) => {
+app.post("/#/reviews", async (req, res) => {
     const comment = new review({
         email: req.body.email,
         comment: req.body.comment,
@@ -55,12 +55,9 @@ app.post("/reviews", async (req, res) => {
         res.end();
     });
 });
-app.get("/reviews", async (req, res) => {
+app.get("/#/reviews", async (req, res) => {
     const list = await review.find({});
     res.json(list)
-});
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "frontend","build", "index.html"));
 });
 app.listen(process.env.PORT,() => {
     console.log(`Server is running on ${process.env.REACT_APP_BACKEND_URL}`);
