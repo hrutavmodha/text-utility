@@ -3,7 +3,7 @@ import { ModeContext } from "../ModeContext"
 function Home() {
     const { mode, light, dark } = useContext(ModeContext);
     const [ivalue, setIvalue] = useState("")
-    const [value, setValue] = useState("Output will be shown here")
+    const [value, setValue] = useState("")
     const output = useRef(null)
     const clicker = (e) => {
         setIvalue(e.target.value)

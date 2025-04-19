@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const path = require("path");
 require("dotenv").config();
 const app = express();
 app.use(express.json());
@@ -67,5 +66,5 @@ app.get("/reviews", async (req, res) => {
     res.json(list)
 });
 app.listen(process.env.PORT,() => {
-    console.log(`Server is running on ${process.env.REACT_APP_BACKEND_URL}`);
+    console.log(`Server is running on ${process.env.REACT_APP_FRONTEND_URL}`);  
 });
