@@ -8,7 +8,7 @@ function App() {
     return (
         <div style={mode ? dark : light}>
             <div className="navbar">
-            <h1 style={{font: "Comic Sans MS", color: "grey"}}>Text Utility App</h1>
+            <h3 style={{font: "Comic Sans MS", color: "grey" }}>Text Utility App</h3>
                 <Link to="/">
                     <button className="navbtn">Home</button>
                 </Link>
