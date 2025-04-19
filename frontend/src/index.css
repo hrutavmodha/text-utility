@@ -164,7 +164,7 @@ input {
 		display: flex;
 	}
 	textarea {
-		width: 50vh;
+		width: 40vh;
 		height: 50vw;
 	}
 	.navbtn {
