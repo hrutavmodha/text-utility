@@ -6,7 +6,8 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: process.env.REACT_APP_FRONTEND_URL
+    origin: process.env.REACT_APP_FRONTEND_URL,
+    method: ["GET", "POST"]
 }));
 app.use(express.static(path.join(__dirname, "..", "frontend","build")));
 mongoose.connect(process.env.MONGO_URI, {
