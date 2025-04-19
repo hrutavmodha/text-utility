@@ -26,7 +26,7 @@ const cmtschema = new mongoose.Schema({
     comment: String
 });
 const user = mongoose.model("users", userschema);
-app.post("/#/auth", async (req, res) => {
+app.post("/auth", async (req, res) => {
     const User = new user({
         name: req.body.name,
         email: req.body.email,
@@ -40,7 +40,7 @@ app.post("/#/auth", async (req, res) => {
     });
 });
 const review = mongoose.model("feedback", cmtschema);
-app.post("/#/reviews", async (req, res) => {
+app.post("/reviews", async (req, res) => {
     const comment = new review({
         email: req.body.email,
         comment: req.body.comment,
