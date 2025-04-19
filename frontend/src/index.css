@@ -194,13 +194,3 @@ input {
 		display: flex;
 	}
 }
-@media (min-width: 601px) {
-	.hamburger {
-		display: none;
-	}
-	.nav-links {
-		display: flex !important;
-		flex-direction: row;
-		gap: 10px;
-	}
-}
