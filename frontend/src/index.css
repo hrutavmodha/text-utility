@@ -149,7 +149,11 @@ input {
 }
 .nav-links {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 	margin-top: 10px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
