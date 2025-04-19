@@ -13,8 +13,8 @@ body {
 	width: fit-content;
 	min-height: 91.5vh;
 	min-width: 90vw;
-
 }
+
 #main {
 	display: flex;
 	flex-direction: column;
@@ -23,6 +23,7 @@ body {
 	width: 100%;
 	padding: 1rem;
 }
+
 .review-card {
 	background: #555;
 	margin: 10px;
@@ -71,7 +72,7 @@ textarea {
 }
 
 button {
-	background:blue;
+	background: blue;
 	color: #fff;
 	margin: 5px;
 	border: none;
@@ -127,6 +128,7 @@ h2 {
 		transform: translateY(0);
 	}
 }
+
 .navbar ul {
 	list-style: none;
 	display: flex;
@@ -145,8 +147,9 @@ input {
 	border: 1px solid black;
 	width: 20%;
 	padding: 3px;
-	border-radius: 10px
+	border-radius: 10px;
 }
+
 .nav-links {
 	display: flex;
 	flex-direction: row;
@@ -156,10 +159,17 @@ input {
 	width: 100%;
 	margin-top: 10px;
 }
+
+.hamburger {
+	display: none;
+}
+
+/* Mobile responsive styles */
 @media screen and (min-width: 320px) and (max-width: 480px) {
 	* {
 		box-sizing: border-box;
 	}
+
 	.navbar {
 		height: 60px;
 		overflow-x: scroll;
@@ -168,21 +178,26 @@ input {
 		top: 0;
 		z-index: 100;
 	}
+
 	.navbar ul {
 		list-style: none;
 		display: flex;
 	}
+
 	textarea {
 		width: 40vh;
 		height: 50vw;
 	}
+
 	.navbtn {
 		background: none;
 	}
+
 	input {
 		width: 50vw;
 	}
-	.hamburger{
+
+	.hamburger {
 		display: block;
 		background: none;
 		border: none;
@@ -190,6 +205,13 @@ input {
 		color: inherit;
 		font-size: 24px;
 	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
 	.nav-links.show {
 		display: flex;
 	}
