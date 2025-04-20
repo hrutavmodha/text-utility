@@ -13,16 +13,11 @@ function App() {
         <div style={mode ? dark : light}>
             <div className="navbar">
                 <div className="navbar-top">
-                    <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
-                        Text Utilities
-                    </h3>
+                    <h3 style={{color: "lightgrey", fontFamily: "Comic Sans MS"}}>Text Utilities</h3>
+                    <button className="logout" onClick={verify} style={{ transform: "translateX(-40vw)" }}>Logout</button>
                     <div style={{ display: "flex", justifyContent: "space-between" }}>
-                        <button onClick={toggler}>
-                            {btn} Mode
-                        </button>
-                        <button onClick={toggleMenu} className="hamburger">
-                            &#9776;
-                        </button>
+                        <button onClick={toggler}>{btn} Mode</button>
+                        <button onClick={toggleMenu} className="hamburger">&#9776;</button>
                     </div>
                 </div>
 
@@ -40,7 +35,7 @@ function App() {
                         <button>Reviews</button>
                     </Link>
                     <Link to="/auth">
-                        <button>Log In</button>
+                        <button>Login</button>
                     </Link>
                 </div>
             </div>
