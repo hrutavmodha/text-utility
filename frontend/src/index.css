@@ -190,25 +190,17 @@ input {
 
 @media screen and (max-width: 768px) {
 	.nav-links {
-		max-height: 0;
-		overflow: hidden;
-		transition: max-height 0.75s ease-in-out;
-		display: flex;
+		display: none;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 		background: darkblue;
 		width: 100%;
-		margin-top: 10px;
 		position: absolute;
 		top: 60px;
 		left: 0;
 		z-index: 90;
-		padding: 10px;
 	}
 
 	.nav-links.show {
-		max-height: 500px;
 		display: flex;
 	}
 
