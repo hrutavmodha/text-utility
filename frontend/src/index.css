@@ -154,12 +154,13 @@ input {
 
 .nav-links {
 	display: flex;
+	max-height: 0;
 	flex-direction: row;
 	gap: 10px;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 10px;
+	transition: max-height 0.75s ease-in-out;
 }
 
 /* Hamburger and mobile responsiveness */
@@ -201,6 +202,7 @@ input {
 	}
 
 	.nav-links.show {
+		max-height: 500px;
 		display: flex;
 	}
 
