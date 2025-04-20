@@ -9,6 +9,7 @@ function App() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const verify = () => {
+        // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
         if (loutp){
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
