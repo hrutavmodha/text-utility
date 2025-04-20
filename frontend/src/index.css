@@ -147,7 +147,6 @@ input {
 .nav-links {
 	display: flex;
 	flex-direction: row;
-	gap: 10px;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -220,7 +219,9 @@ input {
 	input {
 		width: 50vw;
 	}
-
+	.nav-links button {
+		transform: translateY(0);
+	}
 	textarea {
 		width: 90%;
 		height: 50vw;
