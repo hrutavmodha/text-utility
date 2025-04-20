@@ -14,7 +14,7 @@ function App() {
 			display: "flex",
 			flexDirection: "column",
 			padding: "5px",
-			backgroundColor: mode ? "blue" : "darkBlue",
+			backgroundColor: "darkBlue",
             transition: "all 0.75s",
             zIndex: 100
 		},
