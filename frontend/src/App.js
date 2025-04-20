@@ -16,7 +16,7 @@ function App() {
                     <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
                         Text Utilities
                     </h3>
-                    <div>
+                    <div style={{display: "flex", gap: "1rem"}}>
                         <button onClick={toggler} className="mode-toggle">
                             {btn} Mode
                         </button>
