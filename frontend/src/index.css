@@ -220,7 +220,7 @@ input {
 		width: 50vw;
 	}
 	.nav-links button {
-		transform: translateY(0);
+		transform: translateY(10px);
 	}
 	textarea {
 		width: 90%;
