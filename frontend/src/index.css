@@ -114,7 +114,6 @@ h2 {
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	padding: 10px;
 	height: fit-content;
 	background: darkblue;
 	animation: slide-in 1.5s ease-in;
