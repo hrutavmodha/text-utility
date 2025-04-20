@@ -211,7 +211,11 @@ input {
 		left: 0;
 		z-index: 90;
 	}
-
+	.navbar-top{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 	.nav-links.show {
 		transition: max-height 0.75s ease-in-out;
 		max-height: 500px;
