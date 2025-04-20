@@ -146,23 +146,13 @@ input {
 
 .nav-links {
 	display: flex;
-	max-height: 0;
 	flex-direction: row;
 	gap: 10px;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	overflow: hidden;
-	transition: max-height 0.75s ease-in-out;
-}
-
-.nav-links button {
-	background: none;
-	color: white;
-	border: none;
-	border-radius: 4px;
-	padding: 10px;
-	cursor: pointer;
+	overflow: visible;
+	background: darkblue;
 }
 /* Hamburger and mobile responsiveness */
 .hamburger {
