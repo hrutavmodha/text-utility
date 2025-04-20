@@ -1,210 +1,110 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Roboto";
-}
-
-body {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+  }
+  
+  body {
 	overflow-x: hidden;
-}
-
-.body {  
-	height: fit-content;
-	width: fit-content;
-	min-height: 91.5vh;
-	min-width: 90vw;
-}
-
-#main {
+  }
+  
+  #main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	padding: 1rem;
-}
-
-.review-card {
-	background: #555;
-	margin: 10px;
-	padding: 10px;
-	width: 90%;
-	max-width: 500px;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	transition: all 0.3s ease;
-}
-
-.review-card:hover {
-	transform: scale(1.02);
-}
-
-.review-header {
-	border-bottom: 1px solid #ddd;
-}
-
-.review-email {
-	color: #fff;
-	transform: translateX(-50px);
-	font-weight: 600;
-	font-size: 1rem;
-}
-
-.review-body {
-	color: #fff;
-	font-size: 1.1rem;
-}
-
-.review-text {
-	margin: 0;
-}
-
-textarea {
-	border: 1px solid;
-	width: 90%;
-	height: 30vh;
-	padding: 10px;
-	margin: 10px 0;
-	font-size: 1rem;
-	resize: vertical;
-	overflow-y: auto;
-	border-radius: 15px;
-}
-
-button {
-	background: blue;
-	color: #fff;
-	margin: 5px;
-	border: none;
-	cursor: pointer;
-	border-radius: 5px;
-	transition: all 1s ease;
-	font-size: 1rem;
-	width: 100px;
-	height: fit-content;
-	padding: 5px;
-}
-
-button:hover {
-	background: darkblue;
-}
-
-p {
-	width: 95%;
-	word-wrap: normal;
-	overflow-y: auto;
-}
-
-b {
-	text-align: left;
-}
-
-h1,
-h2 {
-	margin: 5px;
-}
-
-.main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.navbar {
-	height: fit-content;
+  }
+  
+  .navbar {
 	width: 100%;
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	background: darkblue;
-	animation: slide-in 1.5s ease-in;
-}
-
-@keyframes slide-in {
+	background-color: darkblue;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	animation: slide-in 1s ease-in-out;
+  }
+  
+  @keyframes slide-in {
 	0% {
-		transform: translateY(-100%);
+	  transform: translateY(-100%);
 	}
 	100% {
-		transform: translateY(0);
+	  transform: translateY(0);
 	}
-}
-
-.navbar ul {
-	list-style: none;
+  }
+  
+  .navbar-top {
 	display: flex;
-}
-
-.navbar ul .navbtn {
-	color: #fff;
-	text-decoration: none;
-}
-
-.navbtn {
-	background: none;
-}
-
-input {
-	border: 1px solid black;
-	width: 20%;
-	padding: 3px;
-	border-radius: 10px;
-}
-
-.nav-links {
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+  }
+  
+  .nav-links {
 	display: flex;
 	flex-direction: row;
-	gap: 10px;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	gap: 10px;
 	margin-top: 10px;
-}
-
-.hamburger {
+	flex-wrap: wrap;
+  }
+  
+  .nav-links a button {
+	padding: 8px 12px;
+	background-color: #555;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  .hamburger {
 	display: none;
-}
-
-/* Mobile responsive styles */
-@media (max-width: 600px) {
-	.navbar {
-	  position: relative;
-	  padding: 10px;
-	}
+  }
   
-	.top-row {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	}
+  .mode-toggle {
+	padding: 8px 12px;
+	background-color: #444;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: 10px;
+  }
   
-	.right-controls {
-	  display: flex;
-	  gap: 10px;
-	  align-items: center;
-	}
-  
-	.hamburger {
-	  position: relative;
-	  background: none;
-	  border: none;
-	  font-size: 24px;
-	  color: inherit;
-	  cursor: pointer;
-	  z-index: 110;
-	}
-  
+  /* Mobile View */
+  @media (max-width: 600px) {
 	.nav-links {
 	  display: none;
 	  flex-direction: column;
-	  position: absolute;
-	  top: 60px;
-	  right: 0;
-	  background-color: darkblue;
 	  width: 100%;
-	  z-index: 1000;
 	}
   
 	.nav-links.show {
 	  display: flex;
+	}
+  
+	.hamburger {
+	  display: block;
+	  position: absolute;
+	  top: 10px;
+	  right: 10px;
+	  font-size: 24px;
+	  background: none;
+	  border: none;
+	  color: white;
+	  z-index: 110;
+	  cursor: pointer;
+	}
+  
+	.navbar-top {
+	  flex-direction: row;
 	}
   }
