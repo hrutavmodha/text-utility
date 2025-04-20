@@ -8,7 +8,21 @@ function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
-
+    const verify = () => {
+        const loutp = confirm("Are you sure you want to logout ?");
+        if (loutp){
+            fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
+                method: "DELETE",
+            }).then((response) => {
+                return response.text();
+            }).then((data) => {
+                alert(data);
+            }).catch((error) => {
+                alert("Error occurred while logging out");
+                console.log(error);
+            });
+        }
+    }
     return (
         <div style={mode ? dark : light}>
             <div className="navbar">

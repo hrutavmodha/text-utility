@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: process.env.REACT_APP_FRONTEND_URL,
-    method: ["GET", "POST"]
+    methods: ["GET", "POST", "DELETE"]
 }));
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -18,7 +18,8 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 const userschema = new mongoose.Schema({
     name: String,
-    email: String
+    email: String,
+    password: String
 });
 const cmtschema = new mongoose.Schema({
     email: String,
@@ -29,6 +30,7 @@ app.post("/auth", async (req, res) => {
     const User = new user({
         name: req.body.name,
         email: req.body.email,
+        password: req.body.password,
     });
     const que = await user.findOne({ email: req.body.email })
     if (que) {
@@ -36,14 +38,28 @@ app.post("/auth", async (req, res) => {
         res.end();
     }
     else{
-        await User.save().then(() => {
+        await User.save()
+        .then(() => {
             res.send("You have logged in successfully");
             res.end();
         }).catch((err) => {
             res.send("An error occurred while logging in. Please try again later.");
+            console.log(err);
             res.end();
         });
     }
+});
+app.delete("/auth", async (req, res) => {
+    await user.findOne({ email: req.body.email })
+    .then(async()=>{
+        await user.deleteOne({ email: req.body.email })
+        res.send("You have logged out successfully");
+        res.end();
+    }).catch((err) => {
+        res.send("An error occurred while logging out. Please try again later.");
+        console.log(err);
+        res.end();
+    });
 });
 const review = mongoose.model("feedback", cmtschema);
 app.post("/reviews", async (req, res) => {
@@ -51,7 +67,8 @@ app.post("/reviews", async (req, res) => {
         email: req.body.email,
         comment: req.body.comment,
     });
-    await comment.save().then(() => {
+    await comment.save()
+    .then(() => {
         console.log("Comment saved successfully");
         res.send("Comment uploaded successfully");
         res.end();
