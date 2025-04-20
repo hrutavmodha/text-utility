@@ -10,24 +10,23 @@ function App() {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
-        <>
-            <div style={mode ? dark : light}>
-                <div className="navbar">
-                    <div className="navbar-top">
-                        <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
-                            Text Utilities
-                        </h3>
-                        <div>
-                            <button onClick={toggler} className="mode-toggle">
-                                {btn} Mode
-                            </button>
-                            <button onClick={toggleMenu} className="hamburger">
-                                &#9776;
-                            </button>
-                        </div>
+        <div style={mode ? dark : light}>
+            <div className="navbar">
+                <div className="navbar-top">
+                    <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
+                        Text Utilities
+                    </h3>
+                    <div>
+                        <button onClick={toggler} className="mode-toggle">
+                            {btn} Mode
+                        </button>
+                        <button onClick={toggleMenu} className="hamburger">
+                            &#9776;
+                        </button>
                     </div>
+                </div>
 
-                    <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+                <div className={`nav-links ${menuOpen ? "show" : ""}`}>
                     <Link to="/">
                         <button>Home</button>
                     </Link>
@@ -44,18 +43,16 @@ function App() {
                         <button>Log In</button>
                     </Link>
                 </div>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/auth" element={<Auth />} />
+                    <Route path="/reviews" element={<Comments />} />
+                </Routes>
             </div>
-
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/auth" element={<Auth />} />
-                <Route path="/reviews" element={<Comments />} />
-            </Routes>
         </div>
-    </>
-  );
+    );
 }
 
 export default App;
