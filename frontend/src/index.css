@@ -160,6 +160,7 @@ input {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 10px;
 	transition: max-height 0.75s ease-in-out;
 }
 
