@@ -137,9 +137,8 @@ h2 {
 	padding: 10px;
 }
 
-.navbar ul .navbtn {
+.navbar .nav-links .navbtn {
 	color: #fff;
-	text-decoration: none;
 }
 
 .navbtn {
