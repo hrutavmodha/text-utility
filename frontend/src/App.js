@@ -14,7 +14,8 @@ function App() {
 			display: "flex",
 			flexDirection: "column",
 			padding: "5px",
-			backgroundColor: mode ? "darkBlue" : "blue",
+			backgroundColor: mode ? "blue" : "darkBlue",
+            transition: "all 0.75s",
             zIndex: 100
 		},
 		topRow: {
