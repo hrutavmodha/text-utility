@@ -28,19 +28,19 @@ function App() {
 
                 <div className={`nav-links ${menuOpen ? "show" : ""}`}>
                     <Link to="/">
-                        <button>Home</button>
+                        <button className="navbtn">Home</button>
                     </Link>
                     <Link to="/about">
-                        <button>About</button>
+                        <button className="navbtn">About</button>
                     </Link>
                     <Link to="/contact">
-                        <button>Contact</button>
+                        <button className="navbtn">Contact</button>
                     </Link>
                     <Link to="/reviews">
-                        <button>Reviews</button>
+                        <button className="navbtn">Reviews</button>
                     </Link>
                     <Link to="/auth">
-                        <button>Log In</button>
+                        <button className="navbtn">Log In</button>
                     </Link>
                 </div>
             </div>
