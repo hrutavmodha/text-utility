@@ -13,19 +13,10 @@ function App() {
         <div style={mode ? dark : light}>
             <div className="navbar">
                 <div className="navbar-top">
-                    <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
-                        Text Utilities
-                    </h3>
-                    <div>
-                        <button onClick={toggler} className="mode-toggle">
-                            {btn} Mode
-                        </button>
-                        <button onClick={toggleMenu} className="hamburger">
-                            &#9776;
-                        </button>
-                    </div>
+                    <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>Text Utilities</h3>
+                    <button onClick={toggler} style={{background: "none", border: "none"}}>{btn} Mode</button>
+                    <button onClick={toggleMenu} className="hamburger">&#9776;</button>
                 </div>
-
                 <div className={`nav-links ${menuOpen ? "show" : ""}`}>
                     <Link to="/">
                         <button>Home</button>
