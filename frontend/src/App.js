@@ -43,14 +43,14 @@ function App() {
                         <button>Log In</button>
                     </Link>
                 </div>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/auth" element={<Auth />} />
-                    <Route path="/reviews" element={<Comments />} />
-                </Routes>
             </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/auth" element={<Auth />} />
+                <Route path="/reviews" element={<Comments />} />
+            </Routes>
         </div>
     );
 }
