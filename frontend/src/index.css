@@ -152,6 +152,9 @@ input {
 	align-items: center;
 	width: 100%;
 	overflow: visible;
+}
+
+.nav-links button {
 	background: none;
 	transform: translateY(-20px);
 }
