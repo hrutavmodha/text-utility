@@ -13,8 +13,9 @@ function App() {
 		container: {
 			display: "flex",
 			flexDirection: "column",
-			padding: "10px",
-			backgroundColor: mode ? "#222" : "#f5f5f5",
+			padding: "5px",
+			backgroundColor: mode ? "darkBlue" : "blue",
+            zIndex: 100
 		},
 		topRow: {
 			display: "flex",
@@ -27,21 +28,10 @@ function App() {
 			margin: 0,
 		},
 		navBtn: {
-			margin: "4px 0",
-			padding: "8px 12px",
-			backgroundColor: "#555",
+            padding: "5px",
+			backgroundColor: "none",
 			color: "#fff",
 			border: "none",
-			borderRadius: "4px",
-			cursor: "pointer",
-		},
-		darkBtn: {
-			padding: "8px 12px",
-			marginLeft: "10px",
-			backgroundColor: "#444",
-			color: "#fff",
-			border: "none",
-			borderRadius: "4px",
 			cursor: "pointer",
 		},
 		hamburger: {
@@ -59,12 +49,8 @@ function App() {
 				<div style={navbarStyles.topRow}>
 					<h3 style={navbarStyles.title}>Text Utilities</h3>
 					<div>
-						<button onClick={toggler} style={navbarStyles.darkBtn}>
-							{btn} Mode
-						</button>
-						<button onClick={toggleMenu} className="hamburger" style={navbarStyles.hamburger}>
-							&#9776;
-						</button>
+						<button onClick={toggler} style={navbarStyles.navBtn}>{btn} Mode</button>
+						<button onClick={toggleMenu} className="hamburger" style={navbarStyles.hamburger}>&#9776;</button>
 					</div>
 				</div>
 
