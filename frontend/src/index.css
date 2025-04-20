@@ -172,9 +172,9 @@ input {
 
 	.navbar {
 		height: 60px;
-		overflow-x: scroll;
+		width: 100%;
 		display: flex;
-		position: sticky;
+		position: relative;
 		top: 0;
 		z-index: 100;
 	}
@@ -198,6 +198,10 @@ input {
 	}
 
 	.hamburger {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 110;
 		display: block;
 		background: none;
 		border: none;
@@ -209,6 +213,12 @@ input {
 	.nav-links {
 		display: none;
 		flex-direction: column;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		background: darkblue;
+		width: 100%;
+		z-index: 100;
 		margin-top: 10px;
 	}
 

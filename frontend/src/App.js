@@ -37,14 +37,17 @@ function App() {
 			cursor: "pointer",
 		},
 		hamburger: {
+            position: "absolute",
+            right: "10px",
+            top: "10px",
 			background: "none",
 			border: "none",
 			fontSize: "24px",
 			color: mode ? "#fff" : "#000",
 			cursor: "pointer",
-		},
-	};
-
+            zIndex: 110
+		}
+	}
 	return (
 		<div style={mode ? dark : light}>
 			<div style={navbarStyles.container}>
