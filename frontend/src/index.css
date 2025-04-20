@@ -156,6 +156,14 @@ input {
 	transition: max-height 0.75s ease-in-out;
 }
 
+.nav-links button {
+	background: none;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	cursor: pointer;
+}
 /* Hamburger and mobile responsiveness */
 .hamburger {
 	display: none;
