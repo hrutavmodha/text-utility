@@ -165,64 +165,46 @@ input {
 }
 
 /* Mobile responsive styles */
-@media screen and (min-width: 320px) and (max-width: 480px) {
-	* {
-		box-sizing: border-box;
-	}
-
+@media (max-width: 600px) {
 	.navbar {
-		height: 60px;
-		width: 100%;
-		display: flex;
-		position: relative;
-		top: 0;
-		z-index: 100;
+	  position: relative;
+	  padding: 10px;
 	}
-
-	.navbar ul {
-		list-style: none;
-		display: flex;
+  
+	.top-row {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
 	}
-
-	textarea {
-		width: 40vh;
-		height: 50vw;
+  
+	.right-controls {
+	  display: flex;
+	  gap: 10px;
+	  align-items: center;
 	}
-
-	.navbtn {
-		background: none;
-	}
-
-	input {
-		width: 50vw;
-	}
-
+  
 	.hamburger {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		z-index: 110;
-		display: block;
-		background: none;
-		border: none;
-		cursor: pointer;
-		color: inherit;
-		font-size: 24px;
+	  position: relative;
+	  background: none;
+	  border: none;
+	  font-size: 24px;
+	  color: inherit;
+	  cursor: pointer;
+	  z-index: 110;
 	}
-
+  
 	.nav-links {
-		display: none;
-		flex-direction: column;
-		position: absolute;
-		top: 60px;
-		right: 0;
-		background: darkblue;
-		width: 100%;
-		z-index: 100;
-		margin-top: 10px;
+	  display: none;
+	  flex-direction: column;
+	  position: absolute;
+	  top: 60px;
+	  right: 0;
+	  background-color: darkblue;
+	  width: 100%;
+	  z-index: 1000;
 	}
-
+  
 	.nav-links.show {
-		display: flex;
+	  display: flex;
 	}
-}
+  }

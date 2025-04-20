@@ -45,7 +45,8 @@ function App() {
 			fontSize: "24px",
 			color: mode ? "#fff" : "#000",
 			cursor: "pointer",
-            zIndex: 110
+            zIndex: 110,
+            transition: "all 0.75s"
 		}
 	}
 	return (
