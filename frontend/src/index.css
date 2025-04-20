@@ -152,7 +152,8 @@ input {
 	align-items: center;
 	width: 100%;
 	overflow: visible;
-	background: darkblue;
+	background: none;
+	transform: translateY(10px);
 }
 /* Hamburger and mobile responsiveness */
 .hamburger {
