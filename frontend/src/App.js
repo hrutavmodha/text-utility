@@ -28,13 +28,16 @@ function App() {
         <div style={mode ? dark : light}>
             <div className="navbar">
                 <div className="navbar-top">
-                    <h3 style={{color: "lightgrey", fontFamily: "Comic Sans MS"}}>Text Utilities</h3>
-                    <button className="logout" onClick={verify} className="logout-btn">Logout</button>
-                    <div style={{ display: "flex", justifyContent: "space-between" }}>
-                        <button onClick={toggler}>{btn} Mode</button>
-                        <button onClick={toggleMenu} className="hamburger">&#9776;</button>
-                    </div>
-                </div>
+                    <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
+Text Utilities
+                    </h3>
+
+  <div className="nav-controls">
+    <button onClick={verify} className="logout-btn">Logout</button>
+    <button onClick={toggler}>{btn} Mode</button>
+    <button onClick={toggleMenu} className="hamburger">&#9776;</button>
+  </div>
+</div>
 
                 <div className={`nav-links ${menuOpen ? "show" : ""}`}>
                     <Link to="/">
