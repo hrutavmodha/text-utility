@@ -243,6 +243,7 @@ input {
 
 	.hamburger {
 		display: block;
+		transform: translateX(40%);
 	}
 
 	input {
