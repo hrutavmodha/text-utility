@@ -118,7 +118,12 @@ h2 {
 	background: darkblue;
 	animation: slide-in 1.5s ease-in;
 }
-
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: 10px;
+}
 @keyframes slide-in {
 	0% {
 		transform: translateY(-100%);
