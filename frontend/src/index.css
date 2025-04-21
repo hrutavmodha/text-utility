@@ -261,6 +261,6 @@ input {
 		align-self: flex-start;
 		margin-left: 10px;
 		margin-top: 15px;
-		transform: translate(0,0);
+		transform: translateY(-60%);
 	}
 }
