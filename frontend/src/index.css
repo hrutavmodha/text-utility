@@ -215,6 +215,9 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+	*{
+		overflow-x: hidden;
+	}
 	.darkmode-btn{
 		transform: translate(0,0);
 	}
