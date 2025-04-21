@@ -191,7 +191,7 @@ input {
 	position: absolute;
 	bottom: 10px;
 	left: 10px;
-	transform: translateY(50%);
+	transform: translateY(150%);
 	background: blue;
 	color: white;
 	border: none;
@@ -204,18 +204,20 @@ input {
 }
 
 .darkmode-btn {
-	background: #444;
+	background: blue;
 	color: white;
 	border: none;
 	border-radius: 4px;
-	padding: 8px 12px;
 	cursor: pointer;
 	z-index: 100;
 	position: relative;
-	margin-right: 40px;
+	transform: translateY(100%);
 }
 
 @media screen and (max-width: 768px) {
+	.darkmode-btn{
+		transform: translate(0,0);
+	}
 	.nav-links {
 		display: none;
 		flex-direction: column;

@@ -35,7 +35,7 @@ function App() {
 
                     <div className="nav-controls">
                         <button onClick={verify} className="logout-btn">Logout</button>
-                        <button onClick={toggler}>{btn} Mode</button>
+                        <button onClick={toggler} className="darkmode-btn">{btn} Mode</button>
                         <button onClick={toggleMenu} className="hamburger">&#9776;</button>
                     </div>
                 </div>
