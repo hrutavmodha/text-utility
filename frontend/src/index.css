@@ -236,7 +236,7 @@ input {
 	}
 
 	.nav-links.show {
-		transition: max-height 0.75s ease-in-out;
+		transform: translateY(12px);
 		max-height: 500px;
 		display: flex;
 	}
