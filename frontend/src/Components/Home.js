@@ -60,6 +60,10 @@ function Home() {
         }
         setValue(ans)
     }
+    const speak = () => {
+        const msg = new SpeechSynthesisUtterance(value)
+        window.speechSynthesis.speak(msg)
+    }
     return (
         <div className="body">
             <h1>Web Text App</h1><br />
@@ -82,6 +86,7 @@ function Home() {
                 <button onClick={sencaser}>Sentence Case</button>
                 <button onClick={casetogle}>Toggle Case</button>
                 <button onClick={revstr}>Reverse text</button>
+                <button onClick={speak}>Speak</button>
                 <button onClick={copier}>Copy</button>
                 <button onClick={clear}>Clear</button>
             </div>
