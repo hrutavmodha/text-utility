@@ -211,7 +211,7 @@ input {
 	cursor: pointer;
 	z-index: 100;
 	position: relative;
-	transform: translateY(100%);
+	transform: translateY(130%);
 }
 
 @media screen and (max-width: 768px) {
