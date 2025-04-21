@@ -5,13 +5,14 @@ import { ModeContext } from "./ModeContext";
 import "./index.css";
 
 function App() {
+    let pass;
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
-        if (loutp){
+        if (loutp) {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
                 method: "DELETE",
             }).then((response) => {
@@ -29,15 +30,15 @@ function App() {
             <div className="navbar">
                 <div className="navbar-top">
                     <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
-Text Utilities
+                        Text Utilities
                     </h3>
 
-  <div className="nav-controls">
-    <button onClick={verify} className="logout-btn">Logout</button>
-    <button onClick={toggler}>{btn} Mode</button>
-    <button onClick={toggleMenu} className="hamburger">&#9776;</button>
-  </div>
-</div>
+                    <div className="nav-controls">
+                        <button onClick={verify} className="logout-btn">Logout</button>
+                        <button onClick={toggler}>{btn} Mode</button>
+                        <button onClick={toggleMenu} className="hamburger">&#9776;</button>
+                    </div>
+                </div>
 
                 <div className={`nav-links ${menuOpen ? "show" : ""}`}>
                     <Link to="/">
