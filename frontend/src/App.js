@@ -29,11 +29,7 @@ function App() {
         <div style={mode ? dark : light}>
             <div className="navbar">
                 <div className="navbar-top">
-                    <center>
-                        <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS" }}>
-                            Text Utilities
-                        </h3>
-                    </center>
+                    <h3 style={{ color: "lightgrey", fontFamily: "Comic Sans MS", textAlign: "center" }}>Text Utilities</h3>
                     <div className="nav-controls">
                         <button onClick={verify} className="logout-btn">Logout</button>
                         <button onClick={toggler} className="darkmode-btn">{btn} Mode</button>
