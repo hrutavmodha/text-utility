@@ -260,7 +260,7 @@ input {
 }
 	.hamburger {
 		display: block;
-		transform: translateX(40%);
+		transform: translateX(10%);
 	}
 
 	input {
