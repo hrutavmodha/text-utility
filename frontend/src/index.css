@@ -189,7 +189,7 @@ input {
 /* NEW: logout button alignment left side */
 .logout-btn {
 	position: absolute;
-	z-index: 100px
+	z-index: 100;
 	bottom: 10px;
 	left: 10px;
 	transform: translateY(150%);
