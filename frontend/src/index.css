@@ -219,6 +219,10 @@ input {
 	body{
 		overflow-x: hidden;
 	}
+	.navbar {
+		position: sticky;
+		top: 0;
+	}
 	.darkmode-btn{
 		transform: translate(0,0);
 	}
