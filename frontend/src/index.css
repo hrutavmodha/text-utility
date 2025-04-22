@@ -245,9 +245,11 @@ input {
 	}
 	@keyframes slideDown {
   0% {
-    transform: translateY(-20px);
+	  opacity: 0;
+    transform: translateY(100vw);
   }
   100% {
+	  opacity: 1;
     transform: translateY(0);
   }
 }
