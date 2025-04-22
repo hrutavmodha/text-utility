@@ -222,6 +222,7 @@ input {
 		top: 0;
 	}
 	.darkmode-btn{
+		width: 100px;
 		transform: translate(0,0);
 	}
 	.nav-links {
@@ -259,6 +260,7 @@ input {
   animation: slideDown 0.75s ease-out forwards;
 }
 	.hamburger {
+		width: fit-content;
 		display: block;
 		transform: translateX(10%);
 	}
@@ -275,6 +277,7 @@ input {
 	}
 
 	.logout-btn {
+		width: 100px;
 		position: static;
 		align-self: flex-start;
 		margin-left: 10px;
