@@ -255,7 +255,7 @@ input {
 }
 
 .show {
-  animation: slideDown 2s ease-out forwards;
+  animation: slideDown 1s ease-out forwards;
 }
 	.hamburger {
 		display: block;
