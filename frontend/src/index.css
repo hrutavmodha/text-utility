@@ -243,7 +243,18 @@ input {
 		max-height: 500px;
 		display: flex;
 	}
+	@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
+.show {
+  animation: slideDown 2s ease-out forwards;
+}
 	.hamburger {
 		display: block;
 		transform: translateX(40%);
