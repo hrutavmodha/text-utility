@@ -246,7 +246,7 @@ input {
 	@keyframes slideDown {
   0% {
 	  opacity: 0;
-    transform: translateY(100vw);
+    transform: translateY(-100vw);
   }
   100% {
 	  opacity: 1;
