@@ -11,9 +11,7 @@ body {
 
 .body {
 	height: fit-content;
-	width: fit-content;
-	min-height: 91.5vh;
-	min-width: 90vw;
+	width: 100%;
 }
 
 #main {
