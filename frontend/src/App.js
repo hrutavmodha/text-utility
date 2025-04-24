@@ -9,6 +9,15 @@ function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
+    useEffect(() => {
+        const navLinks = document.querySelector(".nav-links");
+        if (navLinks) {
+            navLinks.style.animation = "none";
+            setTimeout(() => {
+                navLinks.style.animation = ""; // Reset so future animations work
+            }, 100); // slight delay to skip animation only on first render
+        }
+    }, []);
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
