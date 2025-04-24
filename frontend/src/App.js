@@ -13,7 +13,6 @@ function App() {
       const el = document.getElementById("navLinks");
         if (el && el.classList.contains("hide")) {
           el.classList.remove("hide");
-          setTimeout(() => el.classList.add("hide"), 0); // force reflow
         }
     }, []);
     const verify = () => {
