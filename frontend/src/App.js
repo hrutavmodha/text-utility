@@ -10,7 +10,7 @@ function App() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
     useEffect(() => {
-        const navLinks = document.querySelector(".nav-links");
+        const navLinks = document.querySelector(".hide");
         if (navLinks) {
             navLinks.style.animation = "none";
             setTimeout(() => {
