@@ -8,12 +8,7 @@ function App() {
     let pass;
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => setMenuOpen(!menuOpen);
-    const [hasInteracted, setHasInteracted] = useState(false);
-    toggleMenu = () => {
-    if (!hasInteracted) setHasInteracted(true);
-    setMenuOpen(prev => !prev);
-};
+    const toggleMenu = () => setMenuOpen(prev => !prev)
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
@@ -41,7 +36,7 @@ function App() {
                         <button onClick={toggleMenu} className="hamburger">&#9776;</button>
                     </div>
                 </div>
-<div className={`nav-links ${hasInteracted ? (menuOpen ? "show" : "hide") : ""}`}>
+<div className={`nav-links ${menuOpen ? "show" : "hide"}`}>
                     <Link to="/">
                         <button>Home</button>
                     </Link>
