@@ -9,6 +9,10 @@ function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(prev => !prev)
+    useEffect(()=>{
+        const hide=document.getElementById("hide")
+        hide.style.animation="none"
+    },[])
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
