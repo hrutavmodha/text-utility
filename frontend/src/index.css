@@ -107,21 +107,16 @@ h2 {
 	justify-content: center;
 }
 
+/* Navbar Styles */
 .navbar {
 	position: sticky;
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	height: fit-content;
 	background: darkblue;
 	animation: slide-in 1.5s ease-in;
 }
-.nav-controls {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	margin-right: 10px;
-}
+
 @keyframes slide-in {
 	0% {
 		transform: translateY(-100%);
@@ -145,6 +140,21 @@ input {
 	width: 20%;
 	padding: 3px;
 	border-radius: 10px;
+}
+
+.navbar-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 5px 10px;
+	position: relative;
+}
+
+.nav-controls {
+	display: flex;
+	align-items: center;
+	gap: 12px;
 }
 
 .nav-links {
@@ -175,15 +185,6 @@ input {
 	right: 10px;
 }
 
-.navbar-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	padding: 5px;
-	position: relative;
-}
-
 .logout-btn {
 	position: absolute;
 	z-index: 100;
@@ -212,51 +213,44 @@ input {
 	transform: translateY(130%);
 }
 
-/* ANIMATIONS */
+/* Animation keyframes */
 @keyframes slideDown {
-  0% {
-    transform: translateY(-100vw);
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(-100vw);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 @keyframes slideUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100vw);
-  }
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100vw);
+	}
 }
 
+/* Classes for animation */
 .nav-links.show {
-  animation: slideDown 0.75s ease-out forwards;
-  display: flex;
+	animation: slideDown 0.75s ease-out forwards;
+	display: flex;
 }
 
 .nav-links.hide {
-  animation: slideUp 0.75s ease-in forwards;
-  display: flex;
+	animation: slideUp 0.75s ease-in forwards;
+	display: flex;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
 	body {
 		overflow-x: hidden;
 	}
 
-	.navbar {
-		position: sticky;
-		top: 0;
-	}
-
-	.darkmode-btn {
-		width: 100px;
-		transform: translate(0, 0);
-	}
-
 	.nav-links {
+		display: none;
 		flex-direction: column;
 		background: darkblue;
 		width: 100%;
@@ -264,21 +258,16 @@ input {
 		top: 60px;
 		left: 0;
 		z-index: 90;
-		overflow: hidden;
 	}
 
 	.hamburger {
-		width: fit-content;
 		display: block;
 		transform: translateX(10%);
 	}
 
-	input {
-		width: 50vw;
-	}
-
-	.nav-links button {
-		transform: translateY(0);
+	.nav-links.show,
+	.nav-links.hide {
+		display: flex;
 	}
 
 	textarea {
@@ -293,5 +282,18 @@ input {
 		margin-left: 10px;
 		margin-top: 15px;
 		transform: translateY(-20%);
+	}
+
+	input {
+		width: 50vw;
+	}
+
+	.darkmode-btn {
+		width: 100px;
+		transform: translate(0, 0);
+	}
+
+	.nav-links button {
+		transform: translateY(0);
 	}
 }
