@@ -275,7 +275,7 @@ transform: translateX(10%);
   }
 }
 
-.nav-links.hide {
+.hide {
   animation: slideUp 0.75s ease-in forwards;
   display: flex;
 }
