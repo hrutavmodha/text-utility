@@ -11,10 +11,11 @@ function App() {
     const toggleMenu = () => setMenuOpen(!menuOpen)
     useEffect(() => {
       const el = document.getElementById("navLinks");
-        if (el!==null) {
-          el.style.animation = "none";
+        if (el && el.classList.contains("hide")) {
+          el.classList.remove("hide");
+          setTimeout(() => el.classList.add("hide"), 0); // force reflow
         }
-    },[]);
+    }, []);
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
