@@ -117,10 +117,10 @@ h2 {
 	animation: slide-in 1.5s ease-in;
 }
 .nav-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-right: 10px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-right: 10px;
 }
 @keyframes slide-in {
 	0% {
@@ -184,7 +184,6 @@ input {
 	position: relative;
 }
 
-/* NEW: logout button alignment left side */
 .logout-btn {
 	position: absolute;
 	z-index: 100;
@@ -213,41 +212,8 @@ input {
 	transform: translateY(130%);
 }
 
-@media screen and (max-width: 768px) {
-	body{
-		overflow-x: hidden;
-	}
-	.navbar {
-		position: sticky;
-		top: 0;
-	}
-	.darkmode-btn{
-		width: 100px;
-		transform: translate(0,0);
-	}
-	.nav-links {
-		display: none;
-		flex-direction: column;
-		background: darkblue;
-		width: 100%;
-		position: absolute;
-		top: 60px;
-		left: 0;
-		z-index: 90;
-	}
-	.navbar-top {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
-	.nav-links.show {
-		transform: translateY(30px);
-		max-height: 500px;
-		display: flex;
-	}
-	@keyframes slideDown {
+/* ANIMATIONS */
+@keyframes slideDown {
   0% {
     transform: translateY(-100vw);
   }
@@ -256,9 +222,51 @@ input {
   }
 }
 
-.show {
-  animation: slideDown 0.75s ease-out forwards;
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vw);
+  }
 }
+
+.nav-links.show {
+  animation: slideDown 0.75s ease-out forwards;
+  display: flex;
+}
+
+.nav-links.hide {
+  animation: slideUp 0.75s ease-in forwards;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.navbar {
+		position: sticky;
+		top: 0;
+	}
+
+	.darkmode-btn {
+		width: 100px;
+		transform: translate(0, 0);
+	}
+
+	.nav-links {
+		flex-direction: column;
+		background: darkblue;
+		width: 100%;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		z-index: 90;
+		overflow: hidden;
+	}
+
 	.hamburger {
 		width: fit-content;
 		display: block;
@@ -268,9 +276,11 @@ input {
 	input {
 		width: 50vw;
 	}
+
 	.nav-links button {
 		transform: translateY(0);
 	}
+
 	textarea {
 		width: 90%;
 		height: 50vw;
