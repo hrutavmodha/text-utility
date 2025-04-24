@@ -243,8 +243,7 @@ justify-content: space-between;
 align-items: flex-start;
 }
 
-.nav-links.show {  
-	transform: translateY(30px);  
+.nav-links.show {    
 	max-height: 500px;  
 	display: flex;  
 }  
@@ -254,7 +253,7 @@ align-items: flex-start;
 transform: translateY(-100vw);
 }
 100% {
-transform: translateY(0);
+transform: translateY(15px);
 }
 }
 
