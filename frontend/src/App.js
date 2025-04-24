@@ -9,6 +9,12 @@ function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen)
+    useEffect(() => {
+      const el = document.getElementById("navLinks");
+        if (el!==null) {
+          el.style.animation = "none";
+        }
+    },[]);
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
@@ -36,7 +42,7 @@ function App() {
                         <button onClick={toggleMenu} className="hamburger">&#9776;</button>
                     </div>
                 </div>
-<div className={`nav-links ${menuOpen ? "show" : "hide"}`}>
+<div id="navLinks" className={`nav-links ${menuOpen ? "show" : "hide"}`}>
                     <Link to="/">
                         <button>Home</button>
                     </Link>
