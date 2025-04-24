@@ -37,7 +37,7 @@ function App() {
                     </div>
                 </div>
 
-                <div className={`nav-links ${menuOpen ? "show" : ""}`}>
+                <div className={`nav-links ${menuOpen ? "show" : "hide"}`}>
                     <Link to="/">
                         <button>Home</button>
                     </Link>
