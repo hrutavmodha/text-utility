@@ -10,7 +10,7 @@ function App() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const [hasInteracted, setHasInteracted] = useState(false);
-const toggleMenu = () => {
+    toggleMenu = () => {
     if (!hasInteracted) setHasInteracted(true);
     setMenuOpen(prev => !prev);
 };
