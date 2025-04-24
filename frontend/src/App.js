@@ -9,6 +9,11 @@ function App() {
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
+    const [hasInteracted, setHasInteracted] = useState(false);
+const toggleMenu = () => {
+  setHasInteracted(true);
+  setMenuOpen(prev => !prev);
+};
     const verify = () => {
         // eslint-disable-next-line
         const loutp = confirm("Are you sure you want to logout ?");
