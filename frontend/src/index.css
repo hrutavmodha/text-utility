@@ -266,7 +266,19 @@ width: fit-content;
 display: block;
 transform: translateX(10%);
 }
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vw);
+  }
+}
 
+.nav-links.hide {
+  animation: slideUp 0.75s ease-in forwards;
+  display: flex;
+}
 input {  
 	width: 50vw;  
 }  
