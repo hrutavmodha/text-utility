@@ -22,9 +22,12 @@ function App() {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
                 method: "DELETE",
             }).then((response) => {
-                return response.text();
+                return response.json();
             }).then((data) => {
-                alert(data);
+                if(data.deleteCount === 0){
+                    alert("You haven't logged in");
+                else
+                    alert("You have logged out succcessfully);
             }).catch((error) => {
                 alert("Error occurred while logging out");
                 console.log(error);
