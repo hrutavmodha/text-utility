@@ -27,7 +27,7 @@ function App() {
                 if(data.deleteCount === 0)
                     alert("You haven't logged in");
                 else
-                    alert("You have logged out succcessfully);
+                    alert("You have logged out succcessfully");
             }).catch((error) => {
                 alert("Error occurred while logging out");
                 console.log(error);
