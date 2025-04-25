@@ -13,6 +13,8 @@ overflow-x: hidden;
 .body {
 height: 100vh;
 width: 100%;
+	contain: content;
+	overflow-y: auto;
 }
 
 #main {
