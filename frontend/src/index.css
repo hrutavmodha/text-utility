@@ -11,7 +11,7 @@ overflow-x: hidden;
 }
 
 .body {
-min-height: 100vh;
+min-height: 90vh;
 	height: max-content;
 width: 100%;
 	contain: content;
