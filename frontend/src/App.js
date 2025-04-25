@@ -24,7 +24,7 @@ function App() {
             }).then((response) => {
                 return response.json();
             }).then((data) => {
-                if(data.deleteCount === 0){
+                if(data.deleteCount === 0)
                     alert("You haven't logged in");
                 else
                     alert("You have logged out succcessfully);
