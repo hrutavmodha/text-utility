@@ -58,19 +58,19 @@ function App() {
                 </div>
 <div id="navLinks" className={`nav-links ${menuOpen ? "show" : "hide"}`}>
                     <Link to="/">
-                        <button>Home</button>
+                        <button onClick={toggleMenu}>Home</button>
                     </Link>
                     <Link to="/about">
-                        <button>About</button>
+                        <button onClick={toggleMenu}>About</button>
                     </Link>
                     <Link to="/contact">
-                        <button>Contact</button>
+                        <button onClick={toggleMenu}>Contact</button>
                     </Link>
                     <Link to="/reviews">
-                        <button>Reviews</button>
+                        <button onClick={toggleMenu}>Reviews</button>
                     </Link>
                     <Link to="/auth">
-                        <button>Login</button>
+                        <button onClick={toggleMenu}>Login</button>
                     </Link>
                 </div>
             </div>
