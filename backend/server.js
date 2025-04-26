@@ -48,14 +48,15 @@ app.post("/auth", async (req, res) => {
 });
 app.delete("/auth", async (req, res) => {
     let email = req.body.email
-    await user.findOne({ email: email })
-    .then(async()=>{
-        let delcmd = await user.deleteOne({ email: email })
+    let ufind=await user.findOne({ email: email })
+    if(ufind && email){
+        let delcmd = await user.deleteOne({ ufind })
         res.json(delcmd)
-    }).catch((err) => {
-        res.send("An error occurred while logging out. Please try again later.");
-    });
-});
+    }
+    else{
+        res.send("An error occured while logging you out");
+    }
+})
 const review = mongoose.model("feedback", cmtschema);
 app.post("/reviews", async (req, res) => {
     const comment = new review({
