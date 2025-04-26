@@ -22,9 +22,10 @@ function App() {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
                 method: "DELETE",
                 body: JSON.stringify({
-                    email: localStorage.getItem("email");
-                }).then((response) => {
-                    return response.json();
+                    email: localStorage.getItem("email")
+                })
+            }).then((response) => {
+                return response.json();
             }).then((data) => {
                 if(data.deleteCount === 0)
                     alert("You haven't logged in");
