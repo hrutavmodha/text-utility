@@ -47,9 +47,10 @@ app.post("/auth", async (req, res) => {
     }
 });
 app.delete("/auth", async (req, res) => {
-    await user.findOne({ email: req.body.email })
+    let email = req.body.email
+    await user.findOne({ email: email })
     .then(async()=>{
-        let delcmd = await user.deleteOne({ email: req.body.email })
+        let delcmd = await user.deleteOne({ email: email })
         res.json(delcmd)
     }).catch((err) => {
         res.send("An error occurred while logging out. Please try again later.");
