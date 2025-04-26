@@ -20,9 +20,11 @@ function App() {
         const loutp = confirm("Are you sure you want to logout ?");
         if (loutp) {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
-                method: "DELETE"
-            }).then((response) => {
-                return response.json();
+                method: "DELETE",
+                body: JSON.stringify({
+                    email: localStorage.getItem("email");
+                }).then((response) => {
+                    return response.json();
             }).then((data) => {
                 if(data.deleteCount === 0)
                     alert("You haven't logged in");
