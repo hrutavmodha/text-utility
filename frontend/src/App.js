@@ -34,6 +34,7 @@ function App() {
                     alert("You haven't logged in");
                 else if(data.error)
                     alert(data.error)
+                else
                     alert("You have logged out succcessfully");
             }).catch((error) => {
                 alert("An error occured while logging you out. Please try again later");
