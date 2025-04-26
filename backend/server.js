@@ -53,7 +53,6 @@ app.delete("/auth", async (req, res) => {
         res.json(delcmd)
     }).catch((err) => {
         res.send("An error occurred while logging out. Please try again later.");
-        res.end();
     });
 });
 const review = mongoose.model("feedback", cmtschema);
