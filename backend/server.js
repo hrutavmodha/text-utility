@@ -50,7 +50,7 @@ app.delete("/auth", async (req, res) => {
     let email = req.body.email
     let ufind=await user.findOne({ email: email })
     if(ufind && email){
-        let delcmd = await user.deleteOne({ ufind })
+        let delcmd = await user.deleteOne({ email: email })
         res.json(delcmd)
     }
     else{
