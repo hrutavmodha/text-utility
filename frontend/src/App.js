@@ -35,7 +35,7 @@ function App() {
                 else
                     alert("You have logged out succcessfully");
             }).catch((error) => {
-                alert(error);
+                alert("An error occured while logging you out. Please try again later");
                 console.log(error);
             });
         }
