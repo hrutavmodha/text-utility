@@ -39,8 +39,7 @@ function App() {
                 } else {
                     alert("An error occured");
                 }
-})
-}).catch((error) => {
+            }).catch((error) => {
                 alert("An error occured while logging you out. Please try again later");
                 console.log(error);
             });
