@@ -30,13 +30,17 @@ function App() {
             }).then((response) => {
                 return response.json();
             }).then((data) => {
-                if(data.deletedCount === 0)
+                if (data?.error) {
+                    alert(data.error);
+                } else if (data?.deletedCount === 0) {
                     alert("You haven't logged in");
-                else if(data.error)
-                    alert(data.error)
-                else
-                    alert("You have logged out succcessfully");
-            }).catch((error) => {
+                } else if (data?.deletedCount === 1) {
+                    alert("You have logged out successfully");
+                } else {
+                    alert("An error occured");
+                }
+})
+}).catch((error) => {
                 alert("An error occured while logging you out. Please try again later");
                 console.log(error);
             });
