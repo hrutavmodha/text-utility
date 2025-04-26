@@ -68,7 +68,7 @@ function Auth() {
                 },
                 body: JSON.stringify({
                     name: value,
-                    email: EMail,
+                    email: email,
                     password: PValue
                 })
             }).then((response) => {
