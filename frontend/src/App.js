@@ -21,6 +21,9 @@ function App() {
         if (loutp) {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
                 method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify({
                     email: localStorage.getItem("email")
                 })
