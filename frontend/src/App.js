@@ -20,7 +20,7 @@ function App() {
         const loutp = confirm("Are you sure you want to logout ?");
         if (loutp) {
             fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
-                method: "DELETE",
+                method: "DELETE"
             }).then((response) => {
                 return response.json();
             }).then((data) => {
