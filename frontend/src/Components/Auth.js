@@ -42,8 +42,11 @@ function Auth() {
         <div className="login body">
             <h1>Log In</h1>
             <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} style={mode ? dark : light} />
+            <br/><br/>
             <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} style={mode ? dark : light} />
+            <br/><br/>
             <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} style={mode ? dark : light} maxLength={20} minLength={8} />
+            <br/><br/>
             <button onClick={handleSubmit}>Log In</button>
         </div>
     );
