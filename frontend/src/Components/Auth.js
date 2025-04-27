@@ -30,7 +30,7 @@ function Auth() {
             .then((response) => response.text())
             .then((data) => {
                 alert(data);
-                localStorage.setItem("email", email);
+                localStorage.setItem("name", name);
             })
             .catch((error) => {
                 alert("Error occurred");
