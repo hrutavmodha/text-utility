@@ -13,7 +13,7 @@ function Comments() {
             alert("Comment cannot be empty")
             return
         }
-        else if (email === null || email === undefined || email === "") {
+        else if (name === null || name === undefined || name === "") {
             alert("Please log in to comment");
             window.location.href = "/auth";
         }
@@ -29,7 +29,7 @@ function Comments() {
                 "Content-type": "application/json"
             },
             body: JSON.stringify({
-                email: email,
+                name: name,
                 comment: comment.value,
             })
         }).then((response) => {
