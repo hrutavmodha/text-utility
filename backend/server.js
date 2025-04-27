@@ -22,7 +22,7 @@ const userschema = new mongoose.Schema({
     password: String
 });
 const cmtschema = new mongoose.Schema({
-    email: String,
+    name: String,
     comment: String
 });
 const user = mongoose.model("users", userschema);
@@ -62,7 +62,7 @@ app.delete("/auth", async (req, res) => {
 const review = mongoose.model("feedback", cmtschema);
 app.post("/reviews", async (req, res) => {
     const comment = new review({
-        email: req.body.email,
+        name: req.body.name,
         comment: req.body.comment,
     });
     await comment.save()
