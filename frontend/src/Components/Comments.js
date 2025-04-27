@@ -7,7 +7,7 @@ function Comments() {
         setValue(e.target.value);
     };
     const comment = document.getElementById("comment");
-    const email = localStorage.getItem("email");
+    const name = localStorage.getItem("name");
     const handleComment = () => {
         if (comment.value === "") {
             alert("Comment cannot be empty")
@@ -56,7 +56,7 @@ function Comments() {
                 div.innerHTML = `
                 <div class="review-card">
                     <div class="review-header">
-                        <span class="review-email">${item.email}</span>
+                        <span class="review-email">${item.name}</span>
                     </div>
                     <div class="review-body">
                         <p class="review-text">${item.comment}</p>
