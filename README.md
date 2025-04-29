@@ -59,7 +59,7 @@ npm install concurrently nodemon
 
 ```bash
 # Ensure concurrently is properly installed and is added in package.json to handle frontend and backend concurrently before running the following command
-npm run dev
+npm run fast
 ```
 
 > This will run both the frontend and backend concurrently using `concurrently`
