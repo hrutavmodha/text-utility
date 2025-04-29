@@ -24,14 +24,18 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 
 ```bash
 #Command to clone
-git clone https://github.com/rutu-modha/rutuscodes.git
-cd .\rutuscodes
+git clone https://github.com/rutu-modha/webtextapp.git
+cd .\webtextapp
 ```
 
 ### 2. Install dependencies for both client and server
 
 ```bash
-#Command to install the project dependencies in rutuscodes folder
+#Command to install the project dependencies in frontend and backend folders seperately
+cd .\frontend
+npm install
+cd ..
+cd .\backend
 npm install
 ```
 
