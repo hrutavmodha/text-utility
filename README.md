@@ -39,7 +39,23 @@ cd .\backend
 npm install
 ```
 
-### 3. Start the server
+### 3. Install concurrently and nodemon in the root directory
+
+```bash
+cd ..
+npm install concurrently nodemon
+```
+
+### 4. Modify `package.json` to use concurrently
+
+```JSON
+"scripts": {
+    "client": "cd .\frontend && npm run start"
+    "server": "node .\backend\server.js"
+    "fast": "concurrently \"npm run client\" \"npm run server\""
+}
+```
+### 5. Start the server
 
 ```bash
 # Ensure concurrently is properly installed and is added in package.json to handle frontend and backend concurrently before running the following command
