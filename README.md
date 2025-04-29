@@ -39,7 +39,7 @@ cd .\backend
 npm install
 ```
 
-### 3. Start the development server
+### 3. Start the server
 
 ```bash
 # Ensure concurrently is properly installed and is added in package.json to handle frontend and backend concurrently before running the following command
