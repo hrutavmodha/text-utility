@@ -56,7 +56,7 @@ function App() {
                         <button onClick={toggleMenu} className="hamburger">&#9776;</button>
                     </div>
                 </div>
-<div id="navLinks" className={`nav-links ${menuOpen ? "show" : "hide"}`}>
+                <div id="navLinks" className={`nav-links ${menuOpen ? "show" : "hide"}`}>
                     <Link to="/">
                         <button onClick={toggleMenu}>Home</button>
                     </Link>
