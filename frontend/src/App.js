@@ -3,9 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Home, About, Contact, Comments, Auth } from "./Components/Site";
 import { ModeContext } from "./ModeContext";
 import "./index.css";
-
 function App() {
-    let pass;
     const { mode, btn, toggler, light, dark } = useContext(ModeContext);
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen)
@@ -84,5 +82,4 @@ function App() {
         </div>
     );
 }
-
 export default App;
