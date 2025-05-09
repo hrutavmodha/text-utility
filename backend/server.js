@@ -47,10 +47,10 @@ app.post("/auth", async (req, res) => {
     }
 });
 app.delete("/auth", async (req, res) => {
-    let email = req.body.email
-    let ufind=await user.findOne({ email: email })
+    let name = req.body.name
+    let ufind=await user.findOne({ name: name})
     if(ufind && email){
-        let delcmd = await user.deleteOne({ email: email })
+        let delcmd = await user.deleteOne({ name: name })
         res.json(delcmd)
     }
     else{
