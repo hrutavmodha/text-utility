@@ -23,7 +23,7 @@ function App() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    email: localStorage.getItem("name")
+                    name: localStorage.getItem("name")
                 })
             }).then((response) => {
                 return response.json();
