@@ -9,7 +9,7 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 - **Database**: MongoDB
 
 ## Live Demo
-[https://webtextapp.onrender.com](https://webtextapp.onrender.com)
+[Click Here](https://webtextapp.onrender.com)
 ## Features
 
 - Play with your own text and also review your experience 
@@ -24,8 +24,8 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 
 ```bash
 #Command to clone
-git clone https://github.com/rutu-modha/webtextapp.git
-cd .\webtextapp
+git clone https://github.com/hrutavmodha/text-utility.git
+cd .\text-utility
 ```
 
 ### 2. Install dependencies for both client and server
@@ -39,7 +39,7 @@ cd .\backend
 npm install
 ```
 
-### 3. Install concurrently and nodemon in the root directory
+### 3. Install `concurrently` and `nodemon` in the root directory
 
 ```bash
 cd ..
