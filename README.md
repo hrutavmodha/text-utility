@@ -11,7 +11,7 @@ A sleek and powerful text editing platform built using the MERN Stack. Easily su
 - Displays comments in real-time
 - Enabled Dark Mode and switch easily between Light and Dark Mode
 ## Getting Started
-> **Prerequisite:** Make sure MERN Stack is set up on your local PC properly.
+**Prerequisite:** Make sure MERN Stack is set up on your local PC properly.
 ### 1. Clone the repository
 ```bash
 #Command to clone
@@ -45,9 +45,8 @@ npm install concurrently nodemon
 # Ensure concurrently is properly installed and is added in package.json to handle frontend and backend concurrently before running the following command
 npm run fast
 ```
-> This will run both the frontend and backend concurrently using `concurrently`
+This will run both the frontend and backend concurrently using `concurrently`
 ## Author
 Created by **Hrutav Modha**  
 GitHub: [Hrutav Modha](https://github.com/hrutavmodha)
----
 #### Suggestions and pull requests are welcome!
